@@ -12,6 +12,14 @@ module.exports = function(grunt) {
       }
     },
 
+    cssmin: {
+      combine: {
+        files: {
+          'css/style.css': ['css/style.css', 'css/jquery.bxslider.css']
+        }
+      }
+    },
+
     autoprefixer: {
       options: {
         browsers: ['last 30 version', 'ie 8', 'ie 9']
@@ -43,7 +51,15 @@ module.exports = function(grunt) {
         },
         src: {
             files: ['css/style.css'],
-            tasks: ['autoprefixer'],
+            tasks: ['newer:autoprefixer'],
+          },
+
+        css: {
+            files: 'css/style.css',
+            tasks: ['newer:cssmin'],
+            options: {
+              livereload: true,
+            },
           },
       },
 
@@ -51,12 +67,13 @@ module.exports = function(grunt) {
 
   // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-autoprefixer');
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-newer');
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   // Default task(s).
-  grunt.registerTask('default', ['autoprefixer', 'uglify', 'watch']);
+  grunt.registerTask('default', ['autoprefixer', 'uglify', 'cssmin', 'watch']);
   
 };
