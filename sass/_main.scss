@@ -1,0 +1,127 @@
+/**
+* ----------------------------------------------------------------------------------------------------
+* @IMPORTS
+* ----------------------------------------------------------------------------------------------------
+*/
+
+@import "compass/reset";
+@import "compass/typography";
+@import "compass/utilities/sprites";
+$social-layout: vertical;
+$social-spacing: 5px;
+@import "social/*.png";
+
+$main-layout: vertical;
+$main-spacing: 5px;
+@import "main/*.png";
+$social-sprite-dimensions: true;
+$main-sprite-dimensions: true;
+
+/**
+* ----------------------------------------------------------------------------------------------------
+* FONTS
+* ----------------------------------------------------------------------------------------------------
+*/
+
+@font-face {
+	font-family: 'HelveticaNeue';
+	src: url('../fonts/HelveticaNeue.eot?') format('eot'), 
+	     url('../fonts/HelveticaNeue.woff') format('woff'), 
+	     url('../fonts/HelveticaNeue.ttf')  format('truetype'),
+	     url('../fonts/HelveticaNeue.svg#HelveticaNeue') format('svg');
+	font-weight: 400;
+	font-style: none;
+}
+
+@font-face {
+	font-family: 'HelveticaNeue';
+	src: url('../fonts/HelveticaNeue-Medium.eot?') format('eot'), 
+	     url('../fonts/HelveticaNeue-Medium.woff') format('woff'), 
+	     url('../fonts/HelveticaNeue-Medium.ttf')  format('truetype'),
+	     url('../fonts/HelveticaNeue-Medium.svg#HelveticaNeue-Medium') format('svg');
+	font-weight: 500;
+	font-style: none;
+}
+
+
+@font-face {
+	font-family: 'HelveticaNeue';
+	src: url('../fonts/HelveticaNeue-Bold.eot?') format('eot'), 
+	     url('../fonts/HelveticaNeue-Bold.woff') format('woff'), 
+	     url('../fonts/HelveticaNeue-Bold.ttf')  format('truetype'),
+	     url('../fonts/HelveticaNeue-Bold.svg#HelveticaNeue-Bold') format('svg');
+	font-weight: 700;
+	font-style: none;
+}
+
+/**
+* ----------------------------------------------------------------------------------------------------
+* VARIABLES
+* ----------------------------------------------------------------------------------------------------
+*/
+
+$white: #fff;
+$black: #000;
+$h3-font: #4c5b66;
+$blue: #3e95d2;
+$helvetican: 'HelveticaNeue', helvetica, arial;
+
+/**
+* ----------------------------------------------------------------------------------------------------
+* MAIN STYLES
+* ----------------------------------------------------------------------------------------------------
+*/
+
+body {
+	font-family: $helvetican;
+	font-size: 13px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.btn {
+	display: inline-block;
+}
+
+.clearfix:after {
+	content: "";
+	display: block;
+	height: 0;
+	line-height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+h2 {
+	color: $white;
+	font-size: 48px;
+	font-weight: 700;
+}
+
+h3 {
+	font-size: 20px;
+	color: #4c5b66;
+}
+
+h4 {
+	color: #dcdcdc;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+h5 {
+	font-size: 15px;
+	color: #5c5c5c;
+}
+
+.header, .brands, .features, .slider, .social, .footer{
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.header-container, .brands-container, .features-container, .social, .footer{
+	width: 978px;
+	margin : 0 auto;
+}
