@@ -51,12 +51,12 @@ module.exports = function(grunt) {
         },
         src: {
             files: ['css/style.css'],
-            tasks: ['newer:autoprefixer'],
+            tasks: ['autoprefixer'],
           },
 
         css: {
             files: 'css/style.css',
-            tasks: ['newer:cssmin'],
+            tasks: ['cssmin'],
             options: {
               livereload: true,
             },

@@ -7,111 +7,115 @@
 **/
 
 header {
+	padding: 30px 0 93px 0;
 	background: #4c5b66;
-	padding-top: 40px;
+	position: relative;
 
-	.header-top {
-		margin-bottom: 57px;
+	.smart {
+		position: absolute;
+		bottom: 0;
+	}
 
-		.logo {
-			float: left;
+	.header-container {
+		.header-top {
+			margin-bottom: 57px;
 
-			a {
-				text-indent: -9999px;
-				display: block;
-				@include main-sprite(logo);
+			.logo {
+				float: left;
+
+				a {
+					text-indent: -9999px;
+					display: block;
+					@include main-sprite(logo);
+				}
 			}
-		}
 
-		.main-nav {
-			float: right;
+			.main-nav {
+				float: right;
 
-			ul {
-				li {
-					float: left;
-					margin-right: 48px;
+				ul {
+					li {
+						float: left;
+						margin-right: 48px;
 
-					a {
-						color: $white;
-						font-size: 15px;
-						text-transform: capitalize;
+						a {
+							color: $white;
+							font-size: 15px;
+							text-transform: capitalize;
 
-						&:hover {
-							color: darken($white, 30%);
+							&:hover {
+								color: darken($white, 30%);
+							}
+						}
+
+						.active {
+							box-shadow: inset 0 2px 0 #272e34, 0 1px 0 #65727b;
+							padding: 7px 18px;
+							background: linear-gradient(top, #39424a, #45515a);
+							border-radius: 40px;
 						}
 					}
 
-					.active {
-						box-shadow: inset 0 2px 0 #272e34, 0 1px 0 #65727b;
-						padding: 7px 18px;
-						background: linear-gradient(top, #39424a, #45515a);
-						border-radius: 40px;
+					li:last-child {
+						margin-right: 0;
 					}
 				}
-
-				li:last-child {
-					margin-right: 0;
-				}
 			}
 		}
-	}
 
-	.header-bottom {
-		.smart {
-			float: left;
-		}
+		.header-bottom {
+			article {
+				margin-top: 71px;
+				width: 474px;
+				float: right;
 
-		article {
-			margin-top: 71px;
-			width: 474px;
-			float: right;
-
-			h2 {
-				margin-bottom: 15px;
-			}
-
-			h4 {
-				margin-bottom: 23px;
-			}
-
-			h4, p {
-				line-height: 30px;
-			}
-
-			p {
-				margin-bottom: 55px;
-				font-size: 16px;
-				color: #a0a0a0;
-			}
-
-			.btn-group {
-				.request {
-					padding: 17px 47px;
-					margin-right: 19px;
-					color: $white;
-					font-size: 14px;
-					font-weight: 700;
-					border-radius: 40px;
-					background: linear-gradient(top, #439ed5, #378acd);
-					border: 1px solid #164667;
-					box-shadow: inset 0 1px 0 #a0cfea, inset 0 -1px 0 #529ad4;
+				h2 {
+					margin-bottom: 15px;
 				}
 
-				span, .see {
-					color: $white;
-					font-size: 15px;
+				h4 {
+					margin-bottom: 23px;
 				}
 
-				span {
-					margin-right: 14px;
+				h4, p {
+					line-height: 30px;
 				}
 
-				.see {
-					@include main-sprite(mini_tv);
-					background-position: 0 -810px;
-					border-bottom: 1px solid $white;
-					padding-left: 30px;
-					padding-top: -5px;
+				p {
+					margin-bottom: 55px;
+					font-size: 16px;
+					color: #a0a0a0;
+				}
+
+				.btn-group {
+					.request {
+						padding: 17px 47px;
+						margin-right: 19px;
+						color: $white;
+						font-size: 14px;
+						font-weight: 700;
+						border-radius: 40px;
+						background: linear-gradient(top, #439ed5, #378acd);
+						border: 1px solid #164667;
+						box-shadow: inset 0 1px 0 #a0cfea, inset 0 -1px 0 #529ad4;
+					}
+
+					span, .see {
+						color: $white;
+						font-size: 15px;
+					}
+
+					span {
+						margin-right: 14px;
+					}
+
+					.see {
+						@include main-sprite(mini_tv);
+						background-position: 0 -810px;
+						border-bottom: 1px solid $white;
+						padding-left: 30px;
+						padding-top: -5px;
+					}
 				}
 			}
 		}
@@ -124,7 +128,7 @@ header {
 
 .brands {
 	border-bottom: 1px solid #c3c3c3;
-	padding: 16px 0;
+	padding: 20px 0;
 	background: linear-gradient(top, #f0f0f0, #e7e7e7);
 
 	.brands-container {
@@ -163,7 +167,7 @@ header {
 
 .features {
 	padding: 95px 0 97px 0;
-	background: -webkit-linear-gradient(top, #f2f2f2, $white);
+	background: linear-gradient(top, #f2f2f2, $white);
 
 	.features-container {
 
@@ -212,7 +216,7 @@ header {
 				font-size: 14px;
 				font-weight: 700;
 				border-radius: 5px;
-				background: -webkit-linear-gradient(top, #439ed5, #378acd);
+				background: linear-gradient(top, #439ed5, #378acd);
 				border: 1px solid #164667;
 				box-shadow: inset 0 1px 0 #a0cfea, inset 0 -1px 0 #529ad4;
 			}
